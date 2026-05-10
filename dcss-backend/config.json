@@ -1,0 +1,37 @@
+{
+  "database": {
+    "host": "127.0.0.1",
+    "port": 5432,
+    "name": "dcss_db",
+    "user": "dcss_us",
+    "password": "dcss_123"
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8000,
+    "public_base_url": "http://127.0.0.1:8000",
+    "jwt_secret": "jwt_dcss_2026_fA83kLm22Qp9VzT77nRbXc54sD0eYh",
+    "jwt_algorithm": "HS256",
+    "access_token_expire_minutes": 60,
+    "internal_api_token": "dcss_internal_Q4mN8bV1xC7zL9pR2sT6yH3kF5wA0d",
+    "max_quest": 10
+  },
+  "cors": {
+    "allow_origins": [
+      "http://localhost:5173"
+    ]
+  },
+  "mavlink": {
+    "public_host": "127.0.0.1",
+    "sitl_port_start": 14560,
+    "sitl_port_end": 14600,
+    "proxy_port_start": 14601,
+    "proxy_port_end": 14700
+  },
+  "sitl": {
+    "sim_vehicle_path": "/home/vladik/ardupilot/Tools/autotest/sim_vehicle.py",
+    "vehicle": "ArduCopter",
+    "startup_delay_sec": 15,
+    "extra_args": []
+  }
+}
