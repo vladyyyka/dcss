@@ -2,13 +2,11 @@ from app.database import SessionLocal, engine
 from app import models
 from app.auth import get_password_hash
 
-# Удаляем старые таблицы и создаём заново
 models.Base.metadata.drop_all(bind=engine)
 models.Base.metadata.create_all(bind=engine)
 
 db = SessionLocal()
 
-# 1. Создаём пользователей
 
 # Инструктор
 instructor = models.User(
@@ -28,7 +26,7 @@ pilot = models.User(
 )
 db.add(pilot)
 
-# 2. Типы заданий (из вашего скрипта)
+# 2. Типы заданий 
 types = [
     {
         "name": "Задание №1: Основы управления и взлёт",
